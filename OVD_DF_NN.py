@@ -15,7 +15,9 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
 import random as rn
-ds=pd.read_excel(io='D:\Курсы\Аналитика\Данные ОВД\Разметка данных Итог.xlsx', sheet_name='ds2_no_med')
+
+direct='Ваше расположение файла'
+ds=pd.read_excel(io=direct+'\Разметка данных Итог.xlsx', sheet_name='ds2_no_med')
 
 replace_dict=prep.cleaning.strToIndex([ds['Правонарушение'], ds['Вид деятельности'], ds['Регионы'], ds['Пол']])
 #print((replace_dict))
